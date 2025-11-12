@@ -31,7 +31,7 @@ public class MenuClientes {
             System.out.println("4. Listar Todos los Clientes");
             System.out.println("5. Actualizar Cliente");
             System.out.println("6. Eliminar Cliente");
-            System.out.println("7. Volver al Menú Principal");
+            System.out.println("0. Volver al Menú Principal");
             Formateador.imprimirSeparador();
             
             int opcion = Utilidades.leerEntero("Seleccione una opción: ");
@@ -55,15 +55,16 @@ public class MenuClientes {
                 case 6:
                     eliminarCliente();
                     break;
-                case 7:
+                case 0:
                     continuar = false;
                     break;
                 default:
                     System.out.println("Opción no válida");
             }
             
-            if (continuar && opcion != 7) {
+            if (continuar && opcion != 0) {
                 Utilidades.pausar();
+                Utilidades.limpiarPantalla();
             }
         }
     }

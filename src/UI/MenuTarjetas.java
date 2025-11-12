@@ -41,7 +41,7 @@ public class MenuTarjetas {
             System.out.println("6. Desactivar Tarjeta");
             System.out.println("7. Activar Tarjeta");
             System.out.println("8. Eliminar Tarjeta");
-            System.out.println("9. Volver al Menú Principal");
+            System.out.println("0. Volver al Menú Principal");
             Formateador.imprimirSeparador();
             
             int opcion = Utilidades.leerEntero("Seleccione una opción: ");
@@ -71,15 +71,16 @@ public class MenuTarjetas {
                 case 8:
                     eliminarTarjeta();
                     break;
-                case 9:
+                case 0:
                     continuar = false;
                     break;
                 default:
                     System.out.println("Opción no válida");
             }
             
-            if (continuar && opcion != 9) {
+            if (continuar && opcion != 0) {
                 Utilidades.pausar();
+                Utilidades.limpiarPantalla();
             }
         }
     }

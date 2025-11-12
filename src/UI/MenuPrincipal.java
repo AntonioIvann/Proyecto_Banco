@@ -27,11 +27,11 @@ public class MenuPrincipal {
         
         while (continuar) {
             Formateador.imprimirEncabezado("SISTEMA BANCARIO");
-            System.out.println("1. Gestionar Bancos");
-            System.out.println("2. Gestionar Clientes");
-            System.out.println("3. Gestionar Tarjetas");
-            System.out.println("4. Movimientos Bancarios");
-            System.out.println("5. Salir");
+            System.out.println("1. Bancos");
+            System.out.println("2. Gestion de Clientes");
+            System.out.println("3. Gestion de Tarjetas");
+            System.out.println("4. Realizar movimientos Bancarios");
+            System.out.println("0. Salir");
             Formateador.imprimirSeparador();
             
             int opcion = Utilidades.leerEntero("Seleccione una opción: ");
@@ -49,12 +49,12 @@ public class MenuPrincipal {
                 case 4:
                     menuMovimientos.mostrar();
                     break;
-                case 5:
-                    System.out.println("¡Gracias por usar el Sistema Bancario!");
+                case 0:
+                    System.out.println("¡Gracias por usar nuestro sistema bancario :D!");
                     continuar = false;
                     break;
                 default:
-                    System.out.println("Opción no válida");
+                    System.out.println("Opción no invalida");
             }
             
             if (continuar && opcion != 5) {

@@ -33,13 +33,13 @@ public class MenuMovimientos {
         
         while (continuar) {
             Formateador.imprimirEncabezado("MOVIMIENTOS BANCARIOS");
-            System.out.println("1. Abonar a Tarjeta (Crédito)");
-            System.out.println("2. Retirar de Tarjeta (Débito)");
+            System.out.println("1. Abonar a Tarjeta");
+            System.out.println("2. Retirar efectivo");
             System.out.println("3. Transferencia Intra-bancaria");
             System.out.println("4. Transferencia Interbancaria");
             System.out.println("5. Ver Movimientos de Tarjeta");
             System.out.println("6. Ver Todos los Movimientos");
-            System.out.println("7. Volver al Menú Principal");
+            System.out.println("0. Volver al Menú Principal");
             Formateador.imprimirSeparador();
             
             int opcion = Utilidades.leerEntero("Seleccione una opción: ");
@@ -63,15 +63,16 @@ public class MenuMovimientos {
                 case 6:
                     verTodosMovimientos();
                     break;
-                case 7:
+                case 0:
                     continuar = false;
                     break;
                 default:
                     System.out.println("Opción no válida");
             }
             
-            if (continuar && opcion != 7) {
+            if (continuar && opcion != 0) {
                 Utilidades.pausar();
+                Utilidades.limpiarPantalla();
             }
         }
     }

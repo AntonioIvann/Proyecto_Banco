@@ -30,7 +30,7 @@ public class MenuBancos {
             System.out.println("3. Listar Todos los Bancos");
             System.out.println("4. Actualizar Banco");
             System.out.println("5. Eliminar Banco");
-            System.out.println("6. Volver al Menú Principal");
+            System.out.println("0. Volver al Menú Principal");
             Formateador.imprimirSeparador();
             
             int opcion = Utilidades.leerEntero("Seleccione una opción: ");
@@ -51,15 +51,16 @@ public class MenuBancos {
                 case 5:
                     eliminarBanco();
                     break;
-                case 6:
+                case 0:
                     continuar = false;
                     break;
                 default:
                     System.out.println("Opción no válida");
             }
             
-            if (continuar && opcion != 6) {
+            if (continuar && opcion != 0) {
                 Utilidades.pausar();
+                Utilidades.limpiarPantalla();
             }
         }
     }
